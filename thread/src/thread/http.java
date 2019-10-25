@@ -51,9 +51,4 @@ public class http {
         }
         return "";
     }
-    public static void main(String[] args) {
-
-        String url ="http://int.dpool.sina.com.cn/iplookup/iplookup.php?ip=120.79.75.96";
-        System.out.println(sendRequest(url,"POST"));
-    }
 }
