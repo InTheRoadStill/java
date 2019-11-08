@@ -60,9 +60,9 @@ public class test {
 			System.out.println(respond);
 			Map json = (Map) JSONObject.parse(respond);
 			System.out.println(json.get("age").getClass());  
-	        for (Object map : json.entrySet()){
-	            System.out.println(((Map.Entry)map).getKey()+"  "+((Map.Entry)map).getValue());  
-	        }
+			for (Object map : json.entrySet()){
+			    System.out.println(((Map.Entry)map).getKey()+"  "+((Map.Entry)map).getValue());  
+			}
 			int result = 0;
 			try {
 				if(json.get("age").getClass().equals(String.class)) {
