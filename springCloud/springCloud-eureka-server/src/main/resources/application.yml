@@ -1,0 +1,13 @@
+server: 
+  port: 7070
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://192.168.3.220:7070/eureka/
+  instance: 
+   hostname: 192.168.3.220
+ribbon:
+  eureka:
+    enabled: true

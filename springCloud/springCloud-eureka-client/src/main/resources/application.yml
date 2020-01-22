@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://192.168.4.224:7070/eureka/
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+    
+spring:
+  application:
+    name: seri
+    
+ribbon:
+  eureka:
+    enabled: true
+    
+custom:
+  name: 设备1

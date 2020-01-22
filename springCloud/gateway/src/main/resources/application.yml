@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.3.220:7070/eureka/
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+ 
+spring:
+  application:
+    name: gateway
+
+zuul:
+  routes:
+   service:
+    path: /service/**
+    serviceId: seri
+
+hystrix:
+  command:
+   default:
+    execution:
+     timeout:
+      enabled: false
+
+    
